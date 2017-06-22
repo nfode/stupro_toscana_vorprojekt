@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>392</x>
+      <y>152</y>
+      <w>216</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Node
+--
+#name: String
+#properties: Map&lt;String, String&gt;
+#children: List&lt;Node&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>304</y>
+      <w>312</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>ServiceNode
+--
+-deploymentArtifacts: List&lt;String&gt;
+-implementationArtifacts: Map&lt;ArtifactType, String&gt;
+-parent: Node
+-targetConnections: List&lt;ConnectsToRelationship&gt;
+-sourceConnections: List&lt;ConnectsToRelationship&gt;
+--
++hasImplementationArtifact(i: ArtifactType): Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>608</x>
+      <y>304</y>
+      <w>216</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>MachineNode
+--
+-host: String
+-username: String
+-password: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>224</y>
+      <w>152</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>170.0;10.0;170.0;60.0;10.0;60.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>496</x>
+      <y>224</y>
+      <w>232</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0;270.0;60.0;270.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>152</y>
+      <w>216</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+ArtifactType
+--
++CREATE: ArtifactType &lt;&lt;static&gt;&gt;
++START: ArtifactType &lt;&lt;static&gt;&gt;
++STOP: ArtifactType &lt;&lt;static&gt;&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>488</x>
+      <y>616</y>
+      <w>216</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;abstract&gt;&gt;
+Relationship
+--
+#source: Node
+#target: Node
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>264</x>
+      <y>440</y>
+      <w>312</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>ConnectsToRelationship
+--
+#implementationArtifact: String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>624</x>
+      <y>456</y>
+      <w>216</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>HostedOnRelationship
+--
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>584</x>
+      <y>488</y>
+      <w>176</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;160.0;10.0;90.0;200.0;90.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>488</y>
+      <w>208</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>240.0;160.0;240.0;90.0;10.0;90.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>144</x>
+      <y>152</y>
+      <w>216</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>TOSCAliteModel
+--
+-nodes: List&lt;Node&gt;
+-relationships: List&lt;Relationship&gt;
+-machine: List&lt;MachineNode&gt;
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
